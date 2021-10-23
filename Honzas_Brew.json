@@ -1,0 +1,250 @@
+{
+	"siteVersion": "1.140.0",
+	"_meta": {
+		"sources": [
+			{
+				"json": "HonzasBrew",
+				"abbreviation": "HB",
+				"full": "Honza's Brew",
+				"url": "",
+				"authors": [
+					"Honza"
+				],
+				"convertedBy": []
+			}
+		],
+		"dateAdded": 1635014787,
+		"dateLastModified": 1635014787
+	},
+	"monster": [
+		{
+			"name": "Braon O'Fhraoigh",
+			"shortName": "Braon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HonzasBrew",
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Tiefling"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				},
+				{
+					"ac": 18,
+					"from": [
+						"{@item scale mail|phb}"
+					],
+					"condition": "in Otherworldy guise"
+				}
+			],
+			"hp": {
+				"formula": "16d8 + 16",
+				"average": 88
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 40,
+					"condition": "in Otherworldy guise"
+				},
+				"canHover": false
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 13,
+			"int": 16,
+			"wis": 10,
+			"cha": 18,
+			"save": {
+				"wis": "+5",
+				"cha": "+9"
+			},
+			"skill": {
+				"deception": "+9",
+				"stealth": "+12",
+				"investigation": "+13",
+				"perception": "+5",
+				"intimidation": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Braon's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save {@dc 17}), requiring no material components:"
+					],
+					"will": [
+						"{@spell speak with dead}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell hellish rebuke}",
+							"{@spell Tasha's otherworldly guise|TCE}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Braon is a 16th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). He regains his expended spell slots when he finishes a short or long rest. He knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast}",
+								"{@spell friends}",
+								"{@spell lightning lure}",
+								"{@spell thaumaturgy}",
+								"{@spell toll the dead}"
+							]
+						},
+						"5": {
+							"spells": [
+								"{@spell cause fear}",
+								"{@spell charm person}",
+								"{@spell contact other plane}",
+								"{@spell infernal calling}",
+								"{@spell invisibility}",
+								"{@spell major image}",
+								"{@spell misty step}",
+								"{@spell shadow of moil}",
+								"{@spell sickening radiance}",
+								"{@spell staggering smite}",
+								"{@spell synaptic static|XGE}"
+							],
+							"slots": 3,
+							"lower": 1
+						}
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hexblade's Curse (Recharges after a Short or Long Rest)",
+					"entries": [
+						"As a bonus action, Braon chooses one creature he can see within 30 feet of him. The target is cursed for 1 minute. The curse ends early if the target dies, Braon dies or is {@condition incapacitated}. Until the curse ends, Braon gain the following benefits:",
+						"Braon gains a +5 bonus to damage rolls against the cursed target.",
+						"Any attack roll Braon makes against the cursed target is a critical hit on a roll of 19 or 20 on the {@dice d20}.",
+						"If the cursed target dies, Braon regains 15 hit points."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Braon deals an extra 10 {@damage 3d6} damage when it hits a target with a weapon attack and has advantage on the attack roll. Alternativly when the target is within 5 feet of an ally of Braon that isn't incapacitated or no other creature then the target is within 5 feet of Braon and Braon doesn't have disadvantage on the attack roll."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"On each of its turns, Braon can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				},
+				{
+					"name": "Eldritch Mind",
+					"entries": [
+						"Braon has advantage on Constitution saving throws that he make sto maintain his concentration on a spell."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Braon makes two attacks with Dispater's rapier."
+					]
+				},
+				{
+					"name": "Dispater's rapier",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Light crossbow",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Relentless Hex",
+					"entries": [
+						"As a bonus action, Braon can magically teleport up to 30 feet to an unoccupied space he can see within 5 feet of the target cursed by his Hexblade's Curse."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"When an attacker that Braon can see hits him with an attack, he can use his reaction to halve the attack's damage against him."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"desert",
+				"underdark",
+				"urban"
+			],
+			"tokenUrl": "https://5e.tools/img/VGM/Warlock of the Fiend.png",
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}
