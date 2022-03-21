@@ -556,6 +556,195 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Phase Spider Queen",
+            "source": "HonzasBrew",
+            "basicRules": true,
+            "size": "H",
+            "type": "monstrosity",
+            "alignment": [
+                "U"
+            ],
+            "ac": [
+                {
+                    "ac": 16,
+                    "from": [
+                        "natural armor"
+                    ]
+                }
+            ],
+            "hp": {
+                "formula": "15d12 + 45",
+                "average": 142
+            },
+            "speed": {
+                "walk": 30,
+                "climb": 30
+            },
+            "str": 19,
+            "dex": 17,
+            "con": 16,
+            "int": 7,
+            "wis": 12,
+            "cha": 8,
+            "skill": {
+                "stealth": "+6",
+                "perception": "+7"
+            },
+            "senses": [
+                "truesight 60 ft."
+            ],
+            "passive": 17,
+            "cr": "8",
+            "trait": [
+                {
+                    "name": "Spider Climb",
+                    "entries": [
+                        "The queen can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+                    ]
+                },
+                {
+                    "name": "Web Walker",
+                    "entries": [
+                        "The queen ignores movement restrictions caused by webbing."
+                    ]
+                },
+                {
+                    "name": "Ethereal Stance",
+                    "entries": [
+                        "The queen stays at the border to ethereal plane, causing attack rolls against it to have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displacer beast is {@condition incapacitated} or has a speed of 0."
+                    ]
+                }
+            ],
+            "action": [
+                {
+                    "name": "Multiattack",
+                    "entries": [
+                        "The queen makes 2 bite attack. She can replace one bite attack with a web attack."
+                    ]
+                },
+                {
+                    "name": "Bite",
+                    "entries": [
+                        "{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must make a {@dc 14} Constitution saving throw, taking 18 ({@damage 4d8}) poison damage on a failed save, or half as much damage on a successful one. If the poisThe queenon damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+                    ]
+                },
+                {
+                    "name": "Etherial Web {@recharge 5}",
+                    "entries": [
+                        "{@atk rw} {@hit 6} to hit, range 30/60 ft., one target. {@h}The target is {@condition restrained} by etherial webbing. As an action, the {@condition restrained} target can make a {@dc 15} Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 13; hp 10; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage). At the end of the {@condition restrained} creature's turn, it makes a {@dc 15} Charisma saving throw. On a failure it shifts to the Etherial Plane until it succeeds on the saving throw or is no longer {@condition restrained}."
+                    ]
+                }
+            ],
+            "environment": [
+                "desert",
+                "forest",
+                "grassland",
+                "hill",
+                "underdark",
+                "urban"
+            ],
+            "soundClip": {
+                "type": "external",
+                "url": "https://5e.tools/audio/bestiary/phase-spider.mp3"
+            },
+            "traitTags": [
+                "Spider Climb",
+                "Web Walker"
+            ],
+            "senseTags": [
+                "U"
+            ],
+            "damageTags": [
+                "P",
+                "I"
+            ],
+            "miscTags": [
+                "MW",
+                "RW"
+            ],
+            "conditionInflict": [
+                "paralyzed",
+                "poisoned",
+                "restrained"
+            ],
+            "hasFluff": true,
+            "hasFluffImages": true,
+            "tokenUrl": "https://5e.tools/img/MM/Phase Spider.png",
+            "fluff": {
+                "name": "Phase Spider",
+                "source": "MM",
+                "entries": [
+                    {
+                        "type": "entries",
+                        "entries": [
+                            {
+                                "type": "entries",
+                                "entries": [
+                                    "A phase spider possesses the magical ability to phase in and out of the Ethereal Plane. It seems to appear out of nowhere and quickly vanishes after attacking. Its movement on the Ethereal Plane before coming back to the Material Plane makes it seem like it can teleport."
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "images": [
+                    {
+                        "type": "image",
+                        "href": {
+                            "type": "internal",
+                            "path": "bestiary/MM/Phase Spider.jpg"
+                        }
+                    }
+                ]
+            },
+            "immune": [
+                "poison"
+            ],
+            "conditionImmune": [
+                {
+                    "conditionImmune": [
+                        "charmed"
+                    ]
+                },
+                {
+                    "conditionImmune": [
+                        "frightened"
+                    ]
+                }
+            ],
+            "shortName": "queen",
+            "actionTags": [
+                "Multiattack"
+            ],
+            "legendary": [
+                {
+                    "name": "Bite",
+                    "entries": [
+                        "The queen makes a Bite attack."
+                    ]
+                },
+                {
+                    "name": "Ethereal Escape (Costs 2 actions) {@recharge 4}",
+                    "entries": [
+                        "The queen uses her ethereal jaunt ability."
+                    ]
+                },
+                {
+                    "name": "Spawn spiderlings (Costs 3 actions) {@recharge 5}",
+                    "entries": [
+                        "The queen calls for {@dice 1d2} phase spiders from the ethereal plane. The spiders instantly appear in 10 feet range aroud the queen and act after her."
+                    ]
+                }
+            ],
+            "bonus": [
+                {
+                    "name": "Ethereal Jaunt",
+                    "entries": [
+                        "The queen can magically shift from the Material Plane to the Ethereal Plane, or vice versa."
+                    ]
+                }
+            ]
         }
     ]
 }
